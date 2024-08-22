@@ -11,7 +11,8 @@ import { ConfigModule } from '@nestjs/config';
 import { User } from './users/users.model';
 import { RolesModule } from './roles/roles.module';
 import { Role } from './roles/roles.model';
-import { UserRoles } from './roles/users-roles.model';
+import { UserRoles } from './roles/user-roles.model';
+
 
 @Module({
   imports: [
@@ -33,7 +34,7 @@ import { UserRoles } from './roles/users-roles.model';
           models: [User, Role, UserRoles],
           autoLoadModels: true
       }),
-      RolesModule,
+    RolesModule // ??????
   ],
   controllers: [AppController],
   providers: [AppService],
