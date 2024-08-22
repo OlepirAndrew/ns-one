@@ -14,6 +14,7 @@ import { Role } from './roles/roles.model';
 import { UserRoles } from './roles/user-roles.model';
 
 
+
 @Module({
   imports: [
       AuthModule,
@@ -34,7 +35,7 @@ import { UserRoles } from './roles/user-roles.model';
           models: [User, Role, UserRoles],
           autoLoadModels: true
       }),
-    RolesModule // ??????
+    RolesModule, // ??????
   ],
   controllers: [AppController],
   providers: [AppService],
