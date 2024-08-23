@@ -9,7 +9,7 @@ import * as process from 'node:process';
   imports: [
     UsersModule,
     JwtModule.register({
-      secret: process.env.PRIVATE_KEY || 'ENIGMA',
+      secret: process.env.PRIVATE_KEY || 'SECRET',
       signOptions: {
         expiresIn: '24h'
       }

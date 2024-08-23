@@ -20,7 +20,7 @@ export class User extends Model<User, UserCreationAttrs> {
     email: string;
 
     @ApiProperty({example: '12345', description: 'some description'})
-    @Column({type: DataType.STRING, unique: false, allowNull: false})
+    @Column({type: DataType.STRING, unique: true, allowNull: false})
     password: string;
 
     @ApiProperty({example: 'true', description: 'some description'})
