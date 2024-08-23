@@ -9,13 +9,13 @@ import * as process from 'node:process';
   imports: [
     UsersModule,
     JwtModule.register({
+      global: true,
       secret: process.env.PRIVATE_KEY || 'SECRET',
-      signOptions: {
-        expiresIn: '24h'
-      }
+      signOptions: { expiresIn: '24h' }
     })
   ],
-  controllers: [AuthController],
-  providers: [AuthService]
+  exports: [ AuthService ],
+  controllers: [ AuthController ],
+  providers: [ AuthService ]
 })
 export class AuthModule {}
